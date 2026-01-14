@@ -1,0 +1,154 @@
+@use '../utils/' as *;
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: var(--card-bg);
+    color: var(--text-color2);
+    text-align: center;
+    padding: rem(25);
+    border-radius: rem(5);
+    transition: background 150ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--card-hover);
+    }
+
+    &--facebook {
+        border-top: rem(5) solid var(--facebook);
+    }
+    &--twitter {
+        border-top: rem(5) solid var(--twitter);
+    }
+    &--instagram {
+        padding-top: rem(30);
+        // background: linear-gradient(var(--dark-card), var(--dark-card)) padding-box,
+        // linear-gradient(to right,var(--instagram-start), var(--instagram-mid), var(--instagram-end)) border-box;
+        // border-top: rem(5) solid transparent;
+        // background-clip: padding-box, border-box;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: rem(5);
+            z-index: 1;
+            background: linear-gradient(
+                225deg, 
+                var(--instagram-end), 
+                var(--instagram-mid) 50.91%, 
+                var(--instagram-start) 100%);
+            border-radius: rem(5) rem(5) 0 0;
+        }
+    }
+    &--youtube {
+        border-top: rem(5) solid var(--youtube);
+    }
+
+    &__subtitle {
+        font-size: rem(14);
+        font-weight: 700;
+    }
+
+    &__platform {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: rem(20);
+        margin-bottom: rem(28);
+    }
+    
+    &__icon {
+        display: block;
+        width: 24px; 
+        height: 24px; 
+        margin: rem(8);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    
+
+        &--facebook {
+            background-image: url("/images/icon-facebook.svg");
+        }
+        &--twitter {
+            background-image: url("/images/icon-twitter.svg");
+        }
+        &--instagram {
+            background-image: url("/images/icon-instagram.svg");
+        }
+        &--youtube {
+            background-image: url("/images/icon-youtube.svg");
+            
+        }
+
+        &--down {
+            background-image: url("/images/icon-down.svg");
+            margin-right: rem(5);
+            width: 12px; 
+            height: 12px; 
+        }
+
+        &--up {
+            background-image: url("/images/icon-up.svg");
+            margin-right: rem(5);
+            width: 12px; 
+            height: 12px; 
+        }
+
+
+    }
+
+    &__username {
+        font-size: rem(12);
+        font-weight: bold;
+
+    }
+    &__followers {
+        margin-bottom: rem(9);
+    }
+
+
+    &__count {
+        font-weight: 700;
+        color: var(--text-color);
+        letter-spacing: rem(-2);
+        line-height: 1;
+        margin-bottom: rem(4);
+
+        &--big {
+            font-size: rem(56);
+        }
+        &--small {
+            font-size: rem(32);
+            // text-align: left;
+        }
+    }
+
+    &__label {
+        font-size: rem(12);
+        letter-spacing: rem(5);
+        font-weight: 400;
+        color: var(--text-color2);
+        text-transform: uppercase;
+    }
+
+    &__change {
+        font-size: rem(12);
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &--up {
+            color: var(--lime-green);
+
+        }
+        &--down {
+            color: var(--bright-red);
+        }
+    }
+   
+}
