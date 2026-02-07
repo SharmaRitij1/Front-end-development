@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin-top: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+}
+
+.square {
+  background: #ffffff; /* Use solid white or a very light color */
+  border: none; /* Remove the thin borders */
+  border-radius: 8px; /* Rounded corners look softer */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.08); /* Add depth */
+
+  /* Increase the size slightly for better visuals */
+  width: 60px;
+  height: 60px;
+  font-size: 36px;
+  line-height: 60px; /* Centers text vertically */
+  cursor: pointer;
+
+  /* Add a smooth transition when clicking/hovering */
+  transition: transform 0.2s ease-in-out;
+}
+
+.square:hover {
+  transform: translateY(-2px); /* Lift button on hover */
+}
+
+.board-row {
+  display: flex;
+  flex=direction: row;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  min-height: 100vh; /* Ensures it uses full screen height */
+  flex-direction: column; /* Stack items top to bottom inside */
+}
+.game-info {
+  margin-top: 20px;
+  /* Add a card-like style */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
