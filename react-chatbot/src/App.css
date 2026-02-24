@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer components {
+  .chat-container {
+    /* Mobile: Full Screen | Desktop: Your 7xl centered layout */
+    @apply w-full h-[100dvh] flex flex-col bg-gray-900 overflow-hidden;
+
+    @media (width >= 768px) {
+      @apply mt-8 max-w-7xl mx-auto h-[85vh] rounded-2xl shadow-2xl border border-gray-800;
+    }
+  }
+
+  .chat-message-text {
+    /* Mobile: Wider | Desktop: 70% */
+    @apply bg-gray-800 text-white py-2 px-3 rounded-2xl max-w-[85%] leading-relaxed text-sm;
+
+    @media (width >= 768px) {
+      @apply py-3 px-4 max-w-[70%] text-base;
+    }
+  }
+
+  .chat-message-container {
+    @apply flex-1 overflow-y-auto p-2 md:p-4;
+  }
+
+  .chat-input-container {
+    @apply p-3 bg-gray-800 border-t border-gray-700 flex items-center gap-2 text-white;
+
+    @media (width >= 768px) {
+      @apply p-4 gap-3;
+    }
+  }
+
+  .chat-input {
+    @apply flex-1 bg-gray-900 px-4 py-2 rounded-xl border border-gray-700 focus:outline-none focus:border-green-500 transition-all text-sm;
+
+    @media (width >= 768px) {
+      @apply py-3 text-base;
+    }
+  }
+
+  .send-button {
+    @apply bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-xl text-lg cursor-pointer transition-colors;
+
+    @media (width >= 768px) {
+      @apply px-6 py-3 text-2xl;
+    }
+  }
+
+  .chat-message-user {
+    /* Mobile: Tighter gaps | Desktop: Your exact margins */
+    @apply flex justify-end items-center gap-2 mr-2 mt-4 mb-2;
+
+    @media (width >= 768px) {
+      @apply gap-3 mr-4 mt-8 mb-4;
+    }
+  }
+
+  .chat-message-robot {
+    @apply flex items-center gap-2 ml-2 mb-2;
+
+    @media (width >= 768px) {
+      @apply gap-3 ml-4;
+    }
+  }
+
+  .chat-message-user .chat-message-text {
+    @apply bg-green-600 rounded-tr-none;
+  }
+
+  .chat-message-robot .chat-message-text {
+    @apply bg-gray-700 rounded-tl-none;
+  }
+
+  .chat-message-profile {
+    /* Mobile: Smaller | Desktop: size-16 */
+    @apply size-8 shrink-0;
+
+    @media (width >= 768px) {
+      @apply size-16;
+    }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
